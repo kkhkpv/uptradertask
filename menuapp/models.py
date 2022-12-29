@@ -15,7 +15,7 @@ class MenuItem(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название подменю')
     slug = models.SlugField(max_length=255, verbose_name='URL')
     menu = models.ForeignKey(
-        MenuModel, related_name='menutems', on_delete=models.CASCADE)
+        MenuModel, related_name='menuitems', on_delete=models.CASCADE)
     parent = models.ForeignKey(
         'self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
 

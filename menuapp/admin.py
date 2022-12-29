@@ -4,4 +4,4 @@ from .models import MenuModel, MenuItem
 
 @admin.register(MenuItem, MenuModel)
 class DefaultAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {"slug": ("title", )}
